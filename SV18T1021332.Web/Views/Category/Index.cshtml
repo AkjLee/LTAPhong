@@ -1,0 +1,93 @@
+﻿@model SV18T1021332.Web.Models.CategoryPaginationResult
+@{
+    ViewBag.Title = "Loại hàng";
+}
+
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title"> </h3>
+            <form action="~/category" method="get">
+                <div class="input-group">
+                    <input type="text" name="SearchValue"
+                           class="form-control"
+                           placeholder="Nhập tên địa chỉ cần tìm" autofocus value="@Model.SearchValue">
+                    <span class="input-group-btn">
+                        <button type="submit"
+                                
+                                id="search-btn"
+                                class="btn btn-flat">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <a href="~/category/create"
+                           class=" btn btn-flat btn-primary">
+                            <i class=" fa fa-plus" style=" margin-left: 8px"></i>
+                            Bổ sung
+                        </a>
+                    </span>
+                </div>
+            </form>
+            
+
+    </div>
+    <div class="box-body">
+        <p style="margin-top: auto">
+            Có <strong>@Model.RowCount</strong> loại trong tổng số <strong>@Model.PageCount</strong> trang.
+        </p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr class="bg-primary">
+                        <th> Tên loại hàng</th>
+                        <th> Miêu tả</th>
+                        <th style="width: 120px"> </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td> @item.CategoryName</td>
+                            <td> @item.Description</td>
+                            <td class="text-center">
+                                <a href="~/category/edit/@item.CategoryID"
+                                   class="btn btn-xs btn-info">
+                                    <i class="fa fa-edit"></i>
+                                    Sửa
+                                </a>
+
+                                <a href="~/category/delete/@item.CategoryID"
+                                   class="btn btn-xs btn-danger">
+                                    <i class="fa fa-remove"></i>
+                                    Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @*Phân Trang*@
+    <div class="box-footer text-center">
+        <div>
+            <ul class="pagination">
+                @for (int i = 1; i <= Model.PageCount; i++)
+                {
+                    if (i == Model.Page)
+                    {
+                        <li class="active"><a href="#">@i</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="~/category?page=@i&searchValue=@Model.SearchValue">@i</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>

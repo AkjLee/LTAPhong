@@ -1,0 +1,117 @@
+﻿@model SV18T1021332.DomainModel.Customer
+@{
+    
+}
+<div class="box box-primary">
+    <div class="box-header with-border">
+
+    </div>
+    <div class="box-body">
+        <form class="form-horizontal" action="~/customer/save" method="post">
+
+            <input type="hidden" name="CustomerID" value="@Model.CustomerID" />
+            <div class="form-group">
+                <label class="control-label col-sm-2">Tên khách hàng:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="CustomerName"
+                           name="CustomerName"
+                           placeholder="" autofocus value="@Model.CustomerName">
+                    
+                    @Html.ValidationMessageFor(m =>m.CustomerName)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Tên giao dịch:</label>
+                <div class="col-sm-10">
+                     <input type="text"
+                    class="form-control"
+                    id="ContactName"
+                    name="ContactName"
+                    placeholder="" value="@Model.ContactName">
+                    @*@Html.TextBoxFor(m => m.ContactName, new { @class = "from-control" })*@
+                    @Html.ValidationMessageFor(m => m.ContactName)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Địa chỉ:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="Address"
+                           name="Address"
+                           placeholder="" value="@Model.Address">
+                    @Html.ValidationMessageFor(m => m.Address)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Quốc gia:</label>
+                <div class="col-sm-10">
+                    <select class="form-control"
+                            id="Country"
+                            name="Country">
+                        @foreach (var country in SV18T1021332.BusinessLayer.CommonDataService.ListOfCountries())
+                        {
+                            if (country.CountryName == Model.Country)
+                            {
+                                <option value="@country.CountryName" selected>@country.CountryName</option>
+                            }
+                            else
+                            {
+                                <option value="@country.CountryName">@country.CountryName</option>
+                            }
+                        }
+                        @*@Html.ValidationMessageFor(m => m.Country)*@
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Thành phố:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="City"
+                           name="City"
+                           placeholder="" value="@Model.City">
+                    @Html.ValidationMessageFor(m => m.City)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Mã bưu chính:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="PostalCode"
+                           name="PostalCode"
+                           placeholder="" value="@Model.PostalCode">
+                    @Html.ValidationMessageFor(m => m.PostalCode)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10 text-danger">
+                    @Html.ValidationSummary()
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit"
+                                class="btn btn-primary">
+                            <i class="fa fa-save"></i> Lưu dữ liệu
+                        </button>
+                        <a href="~/customer" class="btn btn-default"> <i class="fa fa-ban"></i> Quay lại</a>
+                    </div>
+                </div>
+</form>
+    </div>
+    <div class="box-footer">
+
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@model SV18T1021332.Web.Models.PaginationSearchInput
+@{
+    ViewBag.Title = " Nhà cung cấp";
+}
+
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">
+        </h3>
+        <form id="searchInput" action="~/supplier/search">
+            <div class="input-group">
+                @Html.HiddenFor(m => m.PagaSize)
+                <input type="text" name="SearchValue"
+                       class="form-control"
+                       placeholder="Nhập tên địa chỉ cần tìm" autofocus value="@Model.SearchValue">
+                <span class="input-group-btn">
+                    <button type="submit"
+                            id="search-btn"
+                            class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+                    <a href="~/supplier/create"
+                       class=" btn btn-flat btn-primary">
+                        <i class=" fa fa-plus" style=" margin-left: 8px"></i>
+                        Bổ sung
+                    </a>
+                </span>
+            </div>
+        </form>
+        <div id="searchResult">
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        function doSearch(page) {
+            var url = $("#searchInput").prop("action");
+            var input = $("#searchInput").serializeArray();
+            input.push({ "name": "page", "value": page });
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: input,
+                error: function () {
+                    alert("your request is not valid!");
+                },
+                success: function (data) {
+                    $("#searchResult").html(data);
+                }
+
+            });
+        }
+
+        $(document).ready(function () {
+            doSearch(@Model.Page);
+            $("#searchInput").submit(function (e) {
+                e.preventDefault();
+                doSearch(1);
+                return false;
+            });
+        });
+
+    </script>
+}
+

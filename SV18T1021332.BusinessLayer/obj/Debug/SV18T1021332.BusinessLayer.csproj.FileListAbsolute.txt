@@ -1,0 +1,17 @@
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.BusinessLayer.dll
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.BusinessLayer.pdb
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.dll
+C:\Users\thile\source\repos\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.pdb
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.BusinessLayer.dll
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.BusinessLayer.pdb
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.DataLayer.dll
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.DomainModel.dll
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.DataLayer.pdb
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\bin\Debug\SV18T1021332.DomainModel.pdb
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.csproj.AssemblyReference.cache
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.csproj.CopyComplete
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.dll
+D:\laptrinhweb\SV18T1021332\SV18T1021332.BusinessLayer\obj\Debug\SV18T1021332.BusinessLayer.pdb
